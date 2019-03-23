@@ -7,13 +7,18 @@
     <groupId>site.taideli</groupId>
     <artifactId>Quigle</artifactId>
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>1.0.0</version>
 
     <modules>
-        <module>develop</module>
+        <module>develop/scheduler</module>
+        <module>develop/view</module>
         <module>ui</module>
-        <module>platform</module>
-        <module>data</module>
+        <module>platform/security</module>
+        <module>data/pump</module>
     </modules>
 
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 </project>
