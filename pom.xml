@@ -12,7 +12,6 @@
     <modules>
         <module>develop/scheduler</module>
         <module>develop/view</module>
-        <module>ui</module>
         <module>platform/security</module>
         <module>data/pump</module>
     </modules>
