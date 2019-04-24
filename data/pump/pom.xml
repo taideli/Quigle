@@ -8,9 +8,19 @@
         <artifactId>Quigle</artifactId>
         <groupId>site.taideli</groupId>
         <version>1.0.0</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>pump</artifactId>
+    <version>1.0.0</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>site.taideli</groupId>
+            <artifactId>log</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
 
 
 </project>

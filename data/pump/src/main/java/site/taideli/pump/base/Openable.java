@@ -1,12 +1,13 @@
 package site.taideli.pump.base;
 
+import site.taideli.log.Logging;
 import site.taideli.pump.parallel.Concurrents;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicReference;
 
-public interface Openable extends AutoCloseable, /*Loggable,*/ Named {
+public interface Openable extends AutoCloseable, Logging, Named {
 
     enum Status {
         OPENING, OPENED, CLOSING, CLOSED
@@ -72,7 +73,7 @@ public interface Openable extends AutoCloseable, /*Loggable,*/ Named {
         }
 
         while (!closed()) {
-            Concurrents.waitSleep(500, logger(), "Waiting for closing finished....");
+            Concurrents.waitSleep(500, this, "Waiting for closing finished....");
             Opened.STATUS.remove(this);
 
         }
