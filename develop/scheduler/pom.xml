@@ -8,8 +8,10 @@
         <artifactId>Quigle</artifactId>
         <groupId>site.taideli</groupId>
         <version>1.0.0</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>scheduler</artifactId>
+    <version>1.0.0</version>
 
 </project>
