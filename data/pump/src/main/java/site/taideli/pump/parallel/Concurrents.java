@@ -1,6 +1,6 @@
 package site.taideli.pump.parallel;
 
-import site.taideli.log.Logging;
+import site.taideli.log.Loggable;
 
 public class Concurrents {
 
@@ -14,17 +14,17 @@ public class Concurrents {
         return waitSleep(millis, null, null);
     }
 
-    public static boolean waitSleep(long millis, Logging logger, CharSequence cause) {
+    public static boolean waitSleep(long millis, Loggable logger, CharSequence cause) {
         if (millis < 0) return true;
         try {
             if (null != logger) {
                 logger.logDebug(String.format("Thread [%s] sleep %dms, cause [%s]", Thread.currentThread().getName(), millis, cause));
             }
             Thread.sleep(millis);
+            return true;
         } catch (InterruptedException e) {
             e.printStackTrace();
             return false;
         }
-        return true;
     }
 }

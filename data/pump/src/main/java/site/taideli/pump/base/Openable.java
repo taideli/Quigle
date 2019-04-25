@@ -1,13 +1,13 @@
 package site.taideli.pump.base;
 
-import site.taideli.log.Logging;
 import site.taideli.pump.parallel.Concurrents;
+import site.taideli.log.Loggable;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicReference;
 
-public interface Openable extends AutoCloseable, Logging, Named {
+public interface Openable extends AutoCloseable, Loggable, Named {
 
     enum Status {
         OPENING, OPENED, CLOSING, CLOSED
