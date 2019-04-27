@@ -5,6 +5,7 @@ import site.taideli.pump.util.Systems;
 
 public interface Pump<V> extends /*Statistical<Pump<V>>,*/ Openable {
 
+    public long DEFAULT_BATCH_SIZE = 1000;
     Pump<V> batch(long batch);
 
     @Override
